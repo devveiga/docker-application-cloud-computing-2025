@@ -1,174 +1,39 @@
-🚀 Fullstack User Registration App
-Backend + Frontend + PostgreSQL + Docker Compose
+# Minha Aplicação Fullstack
 
-Este repositório contém uma aplicação Fullstack para demonstrar:
+## 🚀 Sobre a Aplicação
+Essa aplicação é um projeto fullstack moderno, desenvolvido com foco em **performance, escalabilidade e praticidade**.  
+O backend foi construído usando **Express com TypeScript**, enquanto o frontend foi feito com **React + Vite + TypeScript**.  
 
-Cadastro de usuários
+Todos os serviços, incluindo o banco de dados, são **containerizados com Docker**, garantindo facilidade de instalação e execução em qualquer ambiente.
 
-Listagem de usuários
+---
 
-Backend com Express + PostgreSQL
+## 🛠 Tecnologias Utilizadas
 
-Frontend em React + TypeScript
+### Backend
+- Node.js + Express
+- TypeScript
+- APIs REST estruturadas
 
-Banco de dados via Docker
+### Frontend
+- React
+- Vite
+- TypeScript
+- Componentização moderna e SPA
 
-Painel PGAdmin para gerenciar o banco
+### Banco de Dados
+- Dockerizado (ex: PostgreSQL, MySQL, MongoDB)
+- Configuração via Docker Compose
 
-🧱 Tecnologias utilizadas
-Frontend
+### DevOps / Containerização
+- Docker para todos os serviços
+- Docker Compose para orquestrar backend, frontend e banco de dados
+- Fácil de rodar em qualquer máquina com `docker-compose up`
 
-React 18 + TypeScript
+---
 
-Vite
+## ⚡ Como Rodar a Aplicação
 
-Fetch API
-
-Backend
-
-Node.js 18
-
-Express
-
-PostgreSQL (via pg client)
-
-Docker para build e execução
-
-Banco de Dados
-
-PostgreSQL 16
-
-PGAdmin4
-
-Infraestrutura
-
-Docker + Docker Compose
-
-Rede Docker personalizada
-
-Volume persistente para o banco
-
-🏗️ Arquitetura da Aplicação
-📦 projeto
-├── backend
-│   ├── Dockerfile
-│   ├── src
-│   │   ├── routes
-│   │   │   └── usuarios.ts
-│   │   ├── db.ts
-│   │   └── server.ts
-│   └── package.json
-│
-├── frontend
-│   ├── Dockerfile
-│   ├── src
-│   │   ├── components
-│   │   │   ├── UserRegister.tsx
-│   │   │   └── UserList.tsx
-│   │   └── App.tsx
-│   └── package.json
-│
-├── docker-compose.yml
-└── README.md
-
-🐳 Rodando a aplicação com Docker Compose
-docker compose up --build
-
-
-Isto iniciará os containers:
-
-Serviço	Porta	Função
-Frontend	5173	Interface React
-Backend	3000	API Express
-PostgreSQL	5432	Banco de dados
-PGAdmin	8080	Interface para DB
-🌐 URLs importantes
-Serviço	URL
-Frontend	http://localhost:5173
-
-Backend API	http://localhost:3000/usuarios
-
-PGAdmin	http://localhost:8080
-
-Login PGAdmin:
-
-Email: admin@admin.com
-
-Senha: admin
-
-Host: postgres_db
-
-User: postgres
-
-DB: exemplo
-
-🔥 Funcionalidades
-📝 Cadastro de usuário
-
-Envia para o backend apenas o nome do usuário
-
-Backend salva no PostgreSQL e retorna o usuário criado
-
-📋 Listagem de usuários
-
-Botão no frontend dispara requisição GET
-
-Lista todos os usuários do banco com ID + nome
-
-🔧 Rotas disponíveis no backend
-POST /usuarios
-
-Envia JSON:
-
-{
-  "nome": "Arthur"
-}
-
-
-Retorno:
-
-{
-  "id": 1,
-  "nome": "Arthur"
-}
-
-GET /usuarios
-
-Retorna lista de usuários:
-
-[
-  { "id": 1, "nome": "Arthur" },
-  { "id": 2, "nome": "Vitor" }
-]
-
-🖼️ Exemplo visual (Frontend)
-
-Cadastro de usuário
-
-
-Listagem de usuários
-
-
-GIF do fluxo
-
-
-(Substitua os links acima por imagens reais ou GIF do seu projeto)
-
-🛠️ Desenvolvimento sem Docker (opcional)
-Backend:
-cd backend
-npm install
-npm run dev
-
-Frontend:
-cd frontend
-npm install
-npm run dev
-
-🤝 Contribuições
-
-PRs, issues e sugestões são bem-vindas!
-
-❤️ Agradecimentos
-
-Valeu por usar o projeto!
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
