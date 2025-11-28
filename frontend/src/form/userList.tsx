@@ -92,7 +92,7 @@ function UserList() {
                 <td style={td}>{u.nome}</td>
                 <td style={td}>{u.professor_favorito}</td>
                 <td style={td}>{u.semestre}</td>
-                <td style={td}>{u.curso}</td>
+                <td style={td }>{u.curso}</td>
               </tr>
             ))}
           </tbody>
@@ -106,7 +106,8 @@ function UserList() {
 
 const td = {
   padding: "10px 8px",
-  borderBottom: "1px solid #eee"
+  borderBottom: "1px solid #eee",
+  textAlign: "center"
 };
 
 export default UserList;

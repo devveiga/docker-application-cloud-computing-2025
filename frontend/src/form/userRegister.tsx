@@ -35,7 +35,7 @@ function UserRegister() {
         throw new Error(data.mensagem || "Erro ao cadastrar");
       }
 
-      setMessage(`Usuário criado! ID: ${data.id}`);
+      setMessage(`Usuário criado! Nome: ${data.nome}`);
 
       setNome("");
       setProfessorFavorito("");
@@ -132,7 +132,7 @@ function UserRegister() {
 function FormGroup({ label, children }: any) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <label style={{ marginBottom: "6px", fontWeight: "500" }}>{label}</label>
+      <label style={{ marginBottom: "6px", fontWeight: "500"}}>{label}</label>
       {children}
     </div>
   );
@@ -144,7 +144,8 @@ const inputStyle: React.CSSProperties = {
   border: "1px solid #e64eeb",
   outline: "none",
   fontSize: "14px",
-  background: "#ffffffff"
+  background: "#ffffffff",
+  color: "black"
 };
 
 export default UserRegister;
