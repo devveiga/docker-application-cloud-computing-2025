@@ -15,7 +15,10 @@ export async function connectDB() {
     await client.query(`
       CREATE TABLE IF NOT EXISTS usuarios (
         id SERIAL PRIMARY KEY,
-        nome VARCHAR(100)
+        nome VARCHAR(100),
+        professor_favorito VARCHAR(100),
+        semestre VARCHAR(20),
+        curso VARCHAR(100)
       );
     `);
   } catch (err) {

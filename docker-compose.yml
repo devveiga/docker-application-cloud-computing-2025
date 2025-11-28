@@ -12,6 +12,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
     networks:
       - minha_rede
 
@@ -22,6 +25,9 @@ services:
       - "5173:5173"
     environment:
       VITE_BACKEND_URL: http://backend:3000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
     networks:
       - minha_rede
 

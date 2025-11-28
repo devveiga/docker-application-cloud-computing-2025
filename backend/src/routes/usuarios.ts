@@ -4,11 +4,15 @@ import { client } from "../db";
 const router = Router();
 
 router.post("/", async (req, res) => {
-  const { nome } = req.body;
+  const { nome, professor_favorito, semestre, curso } = req.body;
 
   const result = await client.query(
-    "INSERT INTO usuarios (nome) VALUES ($1) RETURNING *",
-    [nome]
+    `
+    INSERT INTO usuarios (nome, professor_favorito, semestre, curso)
+    VALUES ($1, $2, $3, $4)
+    RETURNING *
+    `,
+    [nome, professor_favorito, semestre, curso]
   );
 
   res.json(result.rows[0]);
