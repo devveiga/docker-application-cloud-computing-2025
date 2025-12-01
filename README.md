@@ -36,4 +36,5 @@ Todos os serviços, incluindo o banco de dados, são **containerizados com Docke
 
 ### 1. Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/devveiga/docker-application-cloud-computing-2025
+
